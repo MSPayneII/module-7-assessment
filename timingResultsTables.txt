@@ -1,0 +1,63 @@
+***** Timing Results *****
++---------------------------------------+
+|      tinyArray Timing Results         |
++---------------+-----------+-----------+
+|   Functions   | Argument  | Results   |
++---------------+-----------+-----------+
+| DoublerAppend | tinyArray | 90.809 μs |
++---------------+-----------+-----------+
+| DoublerInsert | tinyArray | 37.572 μs |
++---------------+-----------+-----------+
+
++-----------------------------------------+
+|       smallArray Timing Results         |
++---------------+------------+------------+
+|   Functions   | Argument   | Results    |
++---------------+------------+------------+
+| DoublerAppend | smallArray | 105.917 μs |
++---------------+------------+------------+
+| DoublerInsert | smallArray | 50.339 μs  |
++---------------+------------+------------+
+
++------------------------------------------+
+|       mediumArray Timing Results         |
++---------------+-------------+------------+
+|   Functions   | Argument    | Results    |
++---------------+-------------+------------+
+| DoublerAppend | mediumArray | 177.965 μs |
++---------------+-------------+------------+
+| DoublerInsert | mediumArray | 189.705 μs |
++---------------+-------------+------------+
+
++------------------------------------------+
+|        largeArray Timing Results         |
++---------------+------------+-------------+
+|   Functions   | Argument   | Results     |
++---------------+------------+-------------+
+| DoublerAppend | largeArray | 671.338 μs  |
++---------------+------------+-------------+
+| DoublerInsert | largeArray | 7.107425 ms |
++---------------+------------+-------------+
+
++-------------------------------------------------+
+|        ExtraLargeArray Timing Results           |
++---------------+-----------------+---------------+
+|   Functions   | Argument        | Results       |
++---------------+-----------------+---------------+
+| DoublerAppend | ExtraLargeArray | 4.286993 ms   |
++---------------+-----------------+---------------+
+| DoublerInsert | ExtraLargeArray | 994.835544 ms |
++---------------+-----------------+---------------+
+
+***** Explanation and Extra Credit *****
+
+Pattern
+    When n is less than or equal to 100, DoublerInsert() has better performance in terms of  speed which is shown in the timing results for both tinyArray and smallArray. DoublerAppend() performs faster when n is greater than or equal to 1000, which is evident in mediumArray, largeArray, and extraLargeArray.
+
+Time complexity, scale, extra credit
+    DoublerAppend() is O(1) because it utilizes .push() which has constant time complexity. This is because it adds an element to the end of a list, and you create an index for that element. 
+
+    DoublerInsert() is O(n) because it utilizes .unshift(), which has a linear time complexity. With .unshift(), you add an element to the beginning of the array and also increment the other array element indexes by 1. With O(n), as n increases, the time it takes to do the task grows the same way that n grows, making it slower than DoublerAppend.
+
+    Although, DoublerInsert was faster than DoublerAppend() when n was less than or equal to 100, DoublerAppend() scales better overall because of it's O(1) performance. 
+
