@@ -55,9 +55,9 @@ Pattern
     When n is less than or equal to 100, DoublerInsert() has better performance in terms of  speed which is shown in the timing results for both tinyArray and smallArray. DoublerAppend() performs faster when n is greater than or equal to 1000, which is evident in mediumArray, largeArray, and extraLargeArray.
 
 Time complexity, scale, extra credit
-    DoublerAppend() is O(1) because it utilizes .push() which has constant time complexity. This is because it adds an element to the end of a list, and you create an index for that element. 
+    DoublerAppend() is O(1) because it utilizes .push() which has constant time complexity. This is because it adds an element to the end of a list, and you create an index for that element. You don't worry about the other element indexes.
 
-    DoublerInsert() is O(n) because it utilizes .unshift(), which has a linear time complexity. With .unshift(), you add an element to the beginning of the array and also increment the other array element indexes by 1. With O(n), as n increases, the time it takes to do the task grows the same way that n grows, making it slower than DoublerAppend.
+    DoublerInsert() is O(n) because it utilizes .unshift(), which has a linear time complexity. With .unshift(), you add an element to the beginning of the array and also increment the other array element indexes by 1. With O(n), as n increases, the time it takes to do the task grows the same way that n grows, making DoublerInsert() slower than DoublerAppend() as n increases.
 
-    Although, DoublerInsert was faster than DoublerAppend() when n was less than or equal to 100, DoublerAppend() scales better overall because of it's O(1) performance. 
+    Although, DoublerInsert() was faster than DoublerAppend() when n was less than or equal to 100, DoublerAppend() scales better overall because of it's O(1) performance. 
 
